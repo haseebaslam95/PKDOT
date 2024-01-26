@@ -48,7 +48,14 @@ Biovid
      * img_00001.jpg #face images
      * .
      * img_00075.jpg #face images
-
+    
+  
+Create annotaions files using create_annotationstxt.py file.
+The annotations should be in the following format.
+class_folder/subject_folder start_frame end_frame class label
+e.g. 4/073109_w_28-PA4-062 0 75 1
+The create_annotationstxt.py file also provides the code for k-fold annotations.
+ 
 
 
 # 3. Running The code
@@ -60,7 +67,7 @@ Biovid
 #### 3.1.5 `physio_transforms.py`Provides the functions for transformation and filtering of physiological modality.
 
 
-
+The 'pkdot_kfold.py' file requires the paths for the pretrained teacher models. 
 
 ### Reference
 
