@@ -21,7 +21,7 @@ Details on how to run the code.
 For most users, ```pip3 install torch torchvision``` should work.
 If you are using Anaconda, ```conda install pytorch torchvision -c pytorch``` should work. 
 
-Create a virtual environment using Conda or Virtualenv and install all the dependencies
+Create a virtual environment using Conda or Virtualenv and install all the dependencies using requirement.txt file.
 
 # 2. Dataset
 The first step is to create the folder heirarchy.
