@@ -57,6 +57,7 @@ Biovid
  * tree-md
  * dir2
    * file21
+     * img_00001.jpg 
    * file22
    * file23
  * dir1
