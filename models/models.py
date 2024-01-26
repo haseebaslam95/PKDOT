@@ -380,29 +380,3 @@ class MultimodalTransformer(nn.Module):
         output = self.fc(combined_attention)  # Use only the final timestep for classification
         return output,combined_attention
     
-
-# class MultimodalTransformer(nn.Module):
-#     def __init__(self, visual_dim, physiological_dim, num_heads, hidden_dim, num_layers, num_classes):
-#         super(MultimodalTransformer, self).__init__()
-#         self.visual_encoder = TransformerEncoderBlock(visual_dim, num_heads, hidden_dim, num_layers)
-#         self.physiological_encoder = TransformerEncoderBlock(physiological_dim, num_heads, hidden_dim, num_layers)
-#         self.visual_attention = nn.MultiheadAttention(visual_dim, num_heads)
-#         self.physiological_attention = nn.MultiheadAttention(physiological_dim, num_heads)
-#         self.fc = nn.Linear(2*visual_dim, num_classes)
-    
-#     def forward(self, visual_features, physiological_features):
-#         #encoders
-#         visual_encoded = self.visual_encoder(visual_features)
-#         physiological_encoded = self.physiological_encoder(physiological_features)
-        
-#         #cross attentions
-#         physiological_attention_output, _ = self.physiological_attention(visual_encoded.permute(1, 0, 2), physiological_encoded.permute(1, 0, 2), physiological_encoded.permute(1, 0, 2))   
-#         visual_attention_output = self.visual_attention(physiological_encoded.permute(1, 0, 2), visual_encoded.permute(1, 0, 2), visual_encoded.permute(1, 0, 2))
-        
-#         #permuting and concatenating
-#         visual_attention_output = visual_attention_output.permute(1, 0, 2)
-#         physiological_attention_output = physiological_attention_output.permute(1, 0, 2)
-#         combined_attention_output = torch.cat((visual_attention_output, physiological_attention_output), dim=2)
-        
-#         output = self.fc(combined_attention_output[:, -1, :])  # Use only the final timestep for classification
-#         return output
