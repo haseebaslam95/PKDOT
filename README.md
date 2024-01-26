@@ -54,14 +54,14 @@ Biovid
  '''
 
 .
- * [tree-md]()
- * [dir2]()
-   * [file21.ext]()
-   * [file22.ext]()
-   * [file23.ext]()
- * [dir1](./dir1)
-   * [file11.ext]()
-   * [file12.ext]()
+ * tree-md
+ * dir2
+   * file21
+   * file22
+   * file23
+ * dir1
+   * file11
+   * file12
 
 
 
