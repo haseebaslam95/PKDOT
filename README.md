@@ -9,6 +9,9 @@
 #### This manual has has two parts
 ### 1- Installation
 Provides installation guide.
+### 2- Dataset 
+Details on structuring and preparing the data.
+
 ### 2- Running the code
 Details on how to run the code.
 
@@ -20,27 +23,42 @@ If you are using Anaconda, ```conda install pytorch torchvision -c pytorch``` sh
 
 Create a virtual environment using Conda or Virtualenv and install all the dependencies
 
-
-# 2. Running The code
-### 2.1 Important Files In codebase: 
-#### 2.1.1 `models.py` in the 'models' folder creates and defines all the models.
-#### 2.1.2 `pkdot_kfold.py` The main code. Trains the student model.	
-#### 2.1.3 `video_dataset_mm.py` Provides the dataloaders to be used by pkdot_kfold file. Used to load both visual and phyioslogical modality.
-#### 2.1.4 `pkdot_utils.py` Provides functions for similarity matrices and visualizations.
-
-
-
-
-## 2.3 Running
+# 2. Dataset
 The first step is to create the folder heirarchy.
+The dataset is originally split by subject. You should create separate directories per class. 
 
+Biovid
+│
+
+├───0 # class folder (BL1)
+│       ├───071309_w_21-BL1-082  # Subject folder
+│       │     ├───img_00001.jpg  #face images
+│       │     .
+│       │     └───img_00075.jpg
+│       └───110810_m_62-BL1-094
+│             ├───img_00001.jpg
+│             .
+│             └───img_00075.jpg
+│
+└───4 # Class folder (PA4)
+        ├───071309_w_21-PA4-006  # subject folder
+        │     ├───img_00001.jpg  #face images
+        │     .
+        │     └───img_00015.jpg
+        └───071614_m_20-PA4-010
+              ├───img_00001.jpg
+              .
+              └───img_00015.jpg
 
  
-1) Run the 'face_detector.py' file to extract facial frames from raw videos and save them in the 'Cropped _Aligned' folder.
-2) Run the 'audio_extract.py' file to extract audio segments from raw audios and save them into separate folders.
 
-
-
+# 3. Running The code
+### 3.1 Important Files In codebase: 
+#### 3.1.1 `models.py` in the 'models' folder creates and defines all the models.
+#### 3.1.2 `pkdot_kfold.py` The main code. Trains the student model.	
+#### 3.1.3 `video_dataset_mm.py` Provides the dataloaders to be used by pkdot_kfold file. Used to load both visual and phyioslogical modality.
+#### 3.1.4 `pkdot_utils.py` Provides functions for similarity matrices and visualizations.
+#### 3.1.5 `physio_transforms.py`Provides the functions for transformation and filtering of physiological modality.
 
 
 
