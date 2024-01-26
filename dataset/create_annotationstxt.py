@@ -111,7 +111,7 @@ def create_annotxt():
             for sub_video in os.listdir(sub_video_path):
                 count = count + 1
             
-            if count == 75: 
+            if count > 15: 
                 if sub_dir == '0' or sub_dir == '1' or sub_dir == '2' or sub_dir == '3' or sub_dir == '4':    
                     # write_file = os.path.join(sub_dir, file_dir) + " " + '1' + " " +str(count) + " " + str(sub_dir)
                     if sub_dir == '0':
@@ -124,7 +124,7 @@ def create_annotxt():
                         class_label = '3'
                     elif sub_dir == '4':
                         class_label = '4'
-                    write_file = os.path.join(sub_dir, file_dir) + " " + '50' + " " + "70" + " " + class_label # only peak
+                    write_file = os.path.join(sub_dir, file_dir) + " " + 'start_frame' + " " + "end_frame" + " " + class_label # only peak
                     file.write(write_file + "\n")
     file.close()    
 
