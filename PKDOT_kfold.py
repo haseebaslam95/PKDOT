@@ -41,7 +41,7 @@ lr_mmtransformer = 0.0001
 
 
 
-
+# comet_ml settings
 experiment = Experiment(
   api_key="",
   project_name="",
@@ -462,13 +462,6 @@ def test_k_fold():
 
 
 
-
-
-def train_1_fold():
-    fold_num = 1
-    train_file_path = '' #path to train annotation file
-    val_file_path = '' #path to val annotation file
-    best_fold_acc=train_student(train_file_path, val_file_path,fold_num)  
 
 
 
