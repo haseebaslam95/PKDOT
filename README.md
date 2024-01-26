@@ -28,41 +28,26 @@ The first step is to create the folder heirarchy.
 The dataset is originally split by subject. You should create separate directories per class. 
 
 Biovid
-'''bash
-│
 
-├───0 # class folder (BL1)
-│       ├───071309_w_21-BL1-082  # Subject folder
-│       │     ├───img_00001.jpg  #face images
-│       │     .
-│       │     └───img_00075.jpg
-│       └───110810_m_62-BL1-094
-│             ├───img_00001.jpg
-│             .
-│             └───img_00075.jpg
-│
-└───4 # Class folder (PA4)
-        ├───071309_w_21-PA4-006  # subject folder
-        │     ├───img_00001.jpg  #face images
-        │     .
-        │     └───img_00015.jpg
-        └───071614_m_20-PA4-010
-              ├───img_00001.jpg
-              .
-              └───img_00015.jpg
-
- '''
-
-.
- * tree-md
- * dir2
-   * file21
-     * img_00001.jpg 
-   * file22
-   * file23
- * dir1
-   * file11
-   * file12
+ * 0 # class folder (BL1)
+   * 071309_w_21-BL1-082  # Subject folder
+     * img_00001.jpg #face images
+     * .
+     * img_00075.jpg #face images
+   * .
+   * 110810_m_62-BL1-094
+     * img_00001.jpg #face images
+     * .
+     * img_00075.jpg #face images*        
+ * 4 # Class folder (PA4)
+   * 071309_w_21-PA4-006  # subject folder
+     * img_00001.jpg #face images
+     * .
+     * img_00075.jpg #face images
+   * 071614_m_20-PA4-010
+     * img_00001.jpg #face images
+     * .
+     * img_00075.jpg #face images
 
 
 
