@@ -28,6 +28,7 @@ The first step is to create the folder heirarchy.
 The dataset is originally split by subject. You should create separate directories per class. 
 
 Biovid
+'''bash
 │
 
 ├───0 # class folder (BL1)
@@ -50,7 +51,7 @@ Biovid
               .
               └───img_00015.jpg
 
- 
+ '''
 
 # 3. Running The code
 ### 3.1 Important Files In codebase: 
